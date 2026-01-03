@@ -1311,3 +1311,8 @@ body {
         page-break-after: always;
     }
 }
+
+.section-divider {
+    border: 2px solid var(--primary-color);
+    margin: 3rem 0;
+}

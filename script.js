@@ -73,9 +73,9 @@ function scrollToTop() {
     });
 }
 
-// 加载完整内容功能（示例）
-function loadFullContent(sectionId) {
-    alert(`完整内容加载功能：这里可以异步加载 ${sectionId} 章节的完整内容。\n\n在实际应用中，可以：\n1. 从Markdown文件读取完整内容\n2. 使用Markdown解析器转换为HTML\n3. 动态插入到页面中\n\n当前演示版本已包含核心章节的完整内容。`);
+// 加载完整内容功能 - 已优化
+function loadFullContent() {
+    alert('✅ 内容已完整加载！\n\n所有章节内容现已直接嵌入页面中，无需动态加载。\n\n可以直接浏览所有内容，支持响应式设计。');
 }
 
 // 键盘导航
