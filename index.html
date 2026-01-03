@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTP执行力问题全解析</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 侧边导航栏 -->
+    <nav class="sidebar">
+        <div class="logo">
+            <h1>ENTP全解析</h1>
+            <p class="subtitle">从思维内耗到高效执行</p>
+        </div>
+
+        <div class="nav-section">
+            <a href="#intro" class="nav-item active" data-section="intro">
+                <span class="icon">📖</span>
+                <span>开始阅读</span>
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-header">一、核心问题</div>
+            <a href="#core-problem" class="nav-item" data-section="core-problem">
+                <span class="icon">🎯</span>
+                <span>思维内耗</span>
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-header">二、根源分析</div>
+            <a href="#logic" class="nav-item" data-section="logic">
+                <span class="icon">🧠</span>
+                <span>底层逻辑</span>
+            </a>
+            <a href="#manifestations" class="nav-item" data-section="manifestations">
+                <span class="icon">🔍</span>
+                <span>具体表现</span>
+            </a>
+            <a href="#damages" class="nav-item" data-section="damages">
+                <span class="icon">⚠️</span>
+                <span>三大危害</span>
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-header">三、破局策略</div>
+            <a href="#overview" class="nav-item" data-section="overview">
+                <span class="icon">💡</span>
+                <span>总体原则</span>
+            </a>
+            <a href="#strategy-1" class="nav-item" data-section="strategy-1">
+                <span class="icon">1️⃣</span>
+                <span>事实vs想象</span>
+            </a>
+            <a href="#strategy-2" class="nav-item" data-section="strategy-2">
+                <span class="icon">2️⃣</span>
+                <span>决策原则库</span>
+            </a>
+            <a href="#strategy-3" class="nav-item" data-section="strategy-3">
+                <span class="icon">3️⃣</span>
+                <span>外部约束</span>
+            </a>
+            <a href="#strategy-4" class="nav-item" data-section="strategy-4">
+                <span class="icon">4️⃣</span>
+                <span>借助S型</span>
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-header">四、补充说明</div>
+            <a href="#notes" class="nav-item" data-section="notes">
+                <span class="icon">📝</span>
+                <span>重要提示</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="content">
+        <!-- 介绍部分 -->
+        <section id="intro" class="section active">
+            <div class="hero">
+                <h1 class="hero-title">ENTP搞钱搞事业&执行力问题全解析</h1>
+                <p class="hero-subtitle">系统性分析ENTP人格在创业、赚钱和事业发展中常遇到的执行力问题，并提供可操作的破解方案</p>
+            </div>
+
+            <div class="quick-nav">
+                <h2>🎯 快速定位</h2>
+                <div class="quick-cards">
+                    <div class="quick-card" onclick="navigateTo('core-problem')">
+                        <div class="quick-icon">❓</div>
+                        <h3>为什么难以成事？</h3>
+                        <p>了解思维内耗的本质</p>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('logic')">
+                        <div class="quick-icon">🔬</div>
+                        <h3>能量如何消耗？</h3>
+                        <p>Ne+Ti的底层机制</p>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('overview')">
+                        <div class="quick-icon">🚀</div>
+                        <h3>如何开始改变？</h3>
+                        <p>查看破局策略总览</p>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('strategy-3')">
+                        <div class="quick-icon">⚡</div>
+                        <h3>最实用工具？</h3>
+                        <p>外部强制约束方法</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h2>📊 核心观点速览</h2>
+                <div class="point-list">
+                    <div class="point-item">
+                        <div class="point-number">1</div>
+                        <div class="point-content">
+                            <h3>核心问题</h3>
+                            <p>ENTP的执行力问题本质是思维内耗，而非单纯的行动力不足</p>
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">2</div>
+                        <div class="point-content">
+                            <h3>根源机制</h3>
+                            <p>Ne（可能性生成）+ Ti（逻辑梳理）+ Si薄弱（信息收集）= 高能耗低产出</p>
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">3</div>
+                        <div class="point-content">
+                            <h3>破局关键</h3>
+                            <p>缩小任务范围、加速分析过程、引入外部约束、补齐细节盲区</p>
+                        </div>
+                    </div>
+                    <div class="point-item">
+                        <div class="point-number">4</div>
+                        <div class="point-content">
+                            <h3>实操工具</h3>
+                            <p>社交对赌、决策原则库、S型人格协作</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta">
+                <button class="btn-primary" onclick="navigateTo('core-problem')">
+                    开始阅读 →
+                </button>
+            </div>
+        </section>
+
+        <!-- 核心问题 -->
+        <section id="core-problem" class="section">
+            <h1 class="section-title">核心痛点：思维内耗是根本症结</h1>
+
+            <div class="content-block">
+                <h2>问题定义</h2>
+                <p class="highlight-text">ENTP野心勃勃、敢闯敢拼，但搞钱搞事业常事与愿违。核心问题并非执行力差，而是陷入了隐蔽且严重的<strong>思维内耗</strong>。</p>
+            </div>
+
+            <div class="content-block">
+                <h2>什么是思维内耗？</h2>
+                <div class="definition-box">
+                    <p>思维内耗是指：<strong>心理能量消耗于内部拉扯，却无现实实质性产出</strong>。</p>
+                </div>
+
+                <h3>与情绪内耗的区别</h3>
+                <div class="comparison">
+                    <div class="compare-item">
+                        <div class="compare-label">情绪内���</div>
+                        <p>容易察觉，表现为焦虑、担忧、自我怀疑等情绪波动</p>
+                    </div>
+                    <div class="compare-item highlight">
+                        <div class="compare-label">思维内耗</div>
+                        <p>隐蔽且严重，本质是"伪深度思考"的低效思维循环</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>核心特征</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>隐蔽性强</h3>
+                        <p>ENTP往往误以为自己在"深度思考"，实际上陷入了低效循环</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>能量消耗巨大</h3>
+                        <p>大脑持续高强度运转，但这些运转并未转化为有效的外部产出</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📉</div>
+                        <h3>产出极低</h3>
+                        <p>大量半成品、直接弃坑、有效产出为零</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>为什么ENTP容易陷入思维内耗？</h2>
+                <p>这与ENTP的认知功能组合密切相关：</p>
+                <div class="function-list">
+                    <div class="function-item">
+                        <span class="function-badge ne">Ne</span>
+                        <div class="function-desc">
+                            <strong>外倾直觉：</strong>主导功能，擅长发散可能性
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <span class="function-badge ti">Ti</span>
+                        <div class="function-desc">
+                            <strong>内倾思考：</strong>辅助功能，需要梳理逻辑
+                        </div>
+                    </div>
+                    <div class="function-item">
+                        <span class="function-badge si">Si</span>
+                        <div class="function-desc">
+                            <strong>内倾感觉：</strong>第四功能，信息收集能力薄弱
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process-flow">
+                    <div class="flow-step">1. 过度发散<br><small>(Ne驱动)</small></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">2. 反复分析<br><small>(Ti消耗)</small></div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">3. 缺乏锚点<br><small>(Si薄弱)</small></div>
+                </div>
+            </div>
+
+            <div class="impact-section">
+                <h2>影响范围</h2>
+                <p>思维内耗不仅影响ENTP的：</p>
+                <ul class="impact-list">
+                    <li>❌ 决策效率</li>
+                    <li>❌ 执行能力</li>
+                    <li>❌ 项目完成率</li>
+                    <li>❌ 创业成功率</li>
+                    <li>❌ 职业发展</li>
+                </ul>
+                <p class="highlight-text">更重要的是，它消耗了ENTP最宝贵的资源：<strong>心理能量和时间</strong>。</p>
+            </div>
+
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('intro')">← 返回首页</button>
+                <button class="btn-primary" onclick="navigateTo('logic')">下一章：底层逻辑 →</button>
+            </div>
+        </section>
+
+        <!-- 底层逻辑 -->
+        <section id="logic" class="section">
+            <h1 class="section-title">思维内耗的底层逻辑（Ne+Ti组合驱动）</h1>
+
+            <div class="content-block">
+                <h2>核心运作模式</h2>
+                <p>ENTP面对新问题时的典型思维流程：</p>
+                <div class="code-block">
+                    新问题 → Ne穷举可能性 → Ti择优梳理 → 循环往复
+                </div>
+                <p class="warning-text">这个看似科学的流程，实则是<strong>过度资源消耗</strong>的陷阱。</p>
+            </div>
+
+            <div class="content-block">
+                <h2>认知功能详解</h2>
+
+                <div class="function-detail">
+                    <div class="function-header ne-bg">
+                        <h3>1. Ne（外倾直觉）：可能性生成器</h3>
+                        <span class="function-tag">主导功能</span>
+                    </div>
+                    <div class="function-body">
+                        <h4>运作方式</h4>
+                        <ul>
+                            <li>从单点快速发散</li>
+                            <li>串联成网状信息</li>
+                            <li>构建全局视角</li>
+                        </ul>
+
+                        <h4>体验特征</h4>
+                        <ul>
+                            <li>享受"颅内高潮"</li>
+                            <li>思维跳跃迅速</li>
+                            <li>联想能力极强</li>
+                        </ul>
+
+                        <div class="alert alert-danger">
+                            <h4>⚠️ 致命缺陷</h4>
+                            <p>构建的"全局地图"基于<strong>有限的客观信息</strong>，充满"脑补"成分，<strong>脱离实际</strong>。</p>
+                        </div>
+
+                        <div class="example-box">
+                            <h4>举例</h4>
+                            <p>看到一个商业机会时，Ne会瞬间联想到：</p>
+                            <ul>
+                                <li>可能的商业模式（5种）</li>
+                                <li>潜在竞争对手（10家）</li>
+                                <li>市场切入角度（8个）</li>
+                                <li>技术实现路径（6条）</li>
+                                <li>风险和机遇（无数个）</li>
+                            </ul>
+                            <p class="question-text">但这些"可能性"中，有多少是基于真实调研？又有多少是脑补？</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-detail">
+                    <div class="function-header ti-bg">
+                        <h3>2. Ti（内倾思考）：内在逻辑判官</h3>
+                        <span class="function-tag">辅助功能</span>
+                    </div>
+                    <div class="function-body">
+                        <h4>运作方式</h4>
+                        <ul>
+                            <li>梳理Ne产出的碎片化信息</li>
+                            <li>构建内在逻辑框架</li>
+                            <li>寻求"完美"的理论体系</li>
+                        </ul>
+
+                        <h4>特征</h4>
+                        <ul>
+                            <li><strong>慢思考过程</strong>：需要时间沉淀</li>
+                            <li><strong>工作量巨大</strong>：Ne产出越多，Ti负担越重</li>
+                            <li><strong>追求精准</strong>：不满意则推倒重来</li>
+                        </ul>
+
+                        <div class="alert alert-warning">
+                            <h4>能量消耗</h4>
+                            <p>当Ne生成100个可能性时，Ti需要：</p>
+                            <ol>
+                                <li>逐一评估每个可能性的逻辑自洽性</li>
+                                <li>寻找各个可能性之间的关联</li>
+                                <li>构建统一的理论框架</li>
+                                <li>反复验证和优化</li>
+                            </ol>
+                            <p class="highlight-text"><strong>结果</strong>：Ti永远在"追赶"Ne，形成永无止境的内部循环。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="function-detail">
+                    <div class="function-header si-bg">
+                        <h3>3. Si（内倾感觉）：关键短板</h3>
+                        <span class="function-tag">第四功能（最弱）</span>
+                    </div>
+                    <div class="function-body">
+                        <h4>本应承担的职责</h4>
+                        <ul>
+                            <li>收集客观现实信息</li>
+                            <li>关注具体细节</li>
+                            <li>积累实践经验</li>
+                            <li>提供现实锚点</li>
+                        </ul>
+
+                        <h4>实际情况</h4>
+                        <p>由于Si薄弱，ENTP：</p>
+                        <ul class="negative-list">
+                            <li>❌ 难以耐心收集足够的客观信息</li>
+                            <li>❌ 容易忽略重要的现实细节</li>
+                            <li>❌ 更倾向于"想象"而非"调研"</li>
+                            <li>❌ 缺乏对过往经验的系统总结</li>
+                        </ul>
+
+                        <div class="chain-effect">
+                            <h4>后果链</h4>
+                            <div class="chain">
+                                <span>Ne的"地基"不扎实</span>
+                                <span class="chain-arrow">→</span>
+                                <span>Ti加工的素材缺乏准确性</span>
+                                <span class="chain-arrow">→</span>
+                                <span>整个思维大厦建立在沙滩上</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>三大功能的恶性循环</h2>
+                <div class="cycle-diagram">
+                    <div class="cycle-step">
+                        <div class="cycle-number">1</div>
+                        <div class="cycle-content">Si薄弱：信息收集不足</div>
+                    </div>
+                    <div class="cycle-arrow">↓</div>
+                    <div class="cycle-step">
+                        <div class="cycle-number">2</div>
+                        <div class="cycle-content">Ne发散：基于有限信息脑补大量可能性</div>
+                    </div>
+                    <div class="cycle-arrow">↓</div>
+                    <div class="cycle-step">
+                        <div class="cycle-number">3</div>
+                        <div class="cycle-content">Ti梳理：耗费巨大能量处理不准确的信息</div>
+                    </div>
+                    <div class="cycle-arrow">↓</div>
+                    <div class="cycle-step">
+                        <div class="cycle-number">4</div>
+                        <div class="cycle-content">新信息出现：推翻原有框架</div>
+                    </div>
+                    <div class="cycle-arrow">↓</div>
+                    <div class="cycle-step highlight">
+                        <div class="cycle-number">5</div>
+                        <div class="cycle-content">回到起点：重新开始循环</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('core-problem')">← 上一章</button>
+                <button class="btn-primary" onclick="navigateTo('manifestations')">下一章：具体表现 →</button>
+            </div>
+        </section>
+
+        <!-- 其他章节将在JavaScript中动态加载 -->
+        <section id="manifestations" class="section">
+            <h1 class="section-title">思维内耗的具体表现</h1>
+            <div class="content-block">
+                <p class="info-text">本章节内容较长，主要包括三种典型表现：无限扩展问题、反复推翻重来、过度怀疑</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('manifestations')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('logic')">← 上一章</button>
+                <button class="btn-primary" onclick="navigateTo('damages')">下一章：三大危害 →</button>
+            </div>
+        </section>
+
+        <section id="damages" class="section">
+            <h1 class="section-title">思维内耗的三大危害</h1>
+            <div class="content-block">
+                <p class="info-text">本章节详细分析决策瘫痪、创造力反噬、能量透支三大危害</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('damages')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('manifestations')">← 上一章</button>
+                <button class="btn-primary" onclick="navigateTo('overview')">下一章：破局策略 →</button>
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <h1 class="section-title">破局策略：从思维空转到有效产出</h1>
+            <div class="content-block">
+                <p class="highlight-text">理解了思维内耗的机制和危害后，是时候采取行动了。破局的关键不在于"压制"Ne的发散或"加强"执行力，而在于<strong>重构思维模式，将能量从内部博弈转向对外产出</strong>。</p>
+            </div>
+
+            <div class="content-block">
+                <h2>核心原则</h2>
+                <div class="principle-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">📏</div>
+                        <h3>缩小任务范围</h3>
+                        <p>明确边界，拒绝无关延伸</p>
+                        <p>"够用"优于"完美"</p>
+                    </div>
+                    <div class="principle-card">
+                        <div class="principle-icon">⚡</div>
+                        <h3>加速分析过程</h3>
+                        <p>复用已有框架，避免重复思考</p>
+                        <p>设定分析时限，强制收敛</p>
+                    </div>
+                    <div class="principle-card">
+                        <div class="principle-icon">🔗</div>
+                        <h3>引入外部约束</h3>
+                        <p>利用DDL制造紧迫感</p>
+                        <p>用外部反馈替代内部完美主义</p>
+                    </div>
+                    <div class="principle-card">
+                        <div class="principle-icon">🔧</div>
+                        <h3>补齐细节盲区</h3>
+                        <p>借助S型人格的实践经验</p>
+                        <p>关注"第一步"而非"全局"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>四大策略概览</h2>
+                <div class="strategy-table">
+                    <div class="table-header">
+                        <div>策略</div>
+                        <div>解决的核心问题</div>
+                        <div>实施难度</div>
+                        <div>见效速度</div>
+                    </div>
+                    <div class="table-row" onclick="navigateTo('strategy-1')">
+                        <div><strong>策略一</strong><br>区分事实与想象</div>
+                        <div>Ne过度脑补</div>
+                        <div>⭐⭐</div>
+                        <div class="speed-fast">快</div>
+                    </div>
+                    <div class="table-row" onclick="navigateTo('strategy-2')">
+                        <div><strong>策略二</strong><br>构建决策原则库</div>
+                        <div>Ti重复劳动</div>
+                        <div>⭐⭐⭐</div>
+                        <div class="speed-medium">中</div>
+                    </div>
+                    <div class="table-row highlight" onclick="navigateTo('strategy-3')">
+                        <div><strong>策略三</strong><br>引入外部强制约束</div>
+                        <div>内部循环</div>
+                        <div>⭐⭐⭐⭐</div>
+                        <div class="speed-fast">极快</div>
+                    </div>
+                    <div class="table-row" onclick="navigateTo('strategy-4')">
+                        <div><strong>策略四</strong><br>向S型人格借力</div>
+                        <div>Si盲区</div>
+                        <div>⭐⭐</div>
+                        <div class="speed-fast">快</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('damages')">← 上一章</button>
+                <button class="btn-primary" onclick="navigateTo('strategy-1')">查看策略一 →</button>
+            </div>
+        </section>
+
+        <!-- 策略章节简化版 -->
+        <section id="strategy-1" class="section">
+            <h1 class="section-title">策略一：区分"客观事实"与"想象"</h1>
+            <div class="strategy-header">
+                <div class="strategy-badge">核心理念</div>
+                <p class="strategy-motto">锚定已知信息，规避主观脑补带来的误导</p>
+            </div>
+            <div class="content-block">
+                <p class="info-text">详细内容包括：三列笔记法、证据核查法、时间盒限制等实操方法</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('strategy-1')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('overview')">← 策略总览</button>
+                <button class="btn-primary" onclick="navigateTo('strategy-2')">下一个策略 →</button>
+            </div>
+        </section>
+
+        <section id="strategy-2" class="section">
+            <h1 class="section-title">策略二：构建决策原则库</h1>
+            <div class="strategy-header">
+                <div class="strategy-badge">核心理念</div>
+                <p class="strategy-motto">打破"重新发明轮子"的惯性，沉淀可复用的逻辑工具</p>
+            </div>
+            <div class="content-block">
+                <p class="info-text">详细内容包括：决策框架模板、经验法则、SOP构建等</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('strategy-2')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('strategy-1')">← 上一个策略</button>
+                <button class="btn-primary" onclick="navigateTo('strategy-3')">下一个策略 →</button>
+            </div>
+        </section>
+
+        <section id="strategy-3" class="section">
+            <h1 class="section-title">策略三：引入外部强制约束</h1>
+            <div class="strategy-header">
+                <div class="strategy-badge recommended">⭐ 强烈推荐</div>
+                <p class="strategy-motto">利用ENTP"好面子""短期爆发力强"的特质，打破内部循环</p>
+            </div>
+            <div class="content-block">
+                <p class="highlight-text">这是四大策略中<strong>见效最快、强制力最强</strong>的方法。</p>
+                <p class="info-text">详细内容包括：社交对赌完整实操流程、DDL设置技巧、监督机制等</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('strategy-3')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('strategy-2')">← 上一个策略</button>
+                <button class="btn-primary" onclick="navigateTo('strategy-4')">下一个策略 →</button>
+            </div>
+        </section>
+
+        <section id="strategy-4" class="section">
+            <h1 class="section-title">策略四：向S型人格借力</h1>
+            <div class="strategy-header">
+                <div class="strategy-badge">核心理念</div>
+                <p class="strategy-motto">弥补具体执行环节的认知短板，让方案落地</p>
+            </div>
+            <div class="content-block">
+                <p class="info-text">详细内容包括：如何识别S型人格、三大关键问题、协作技巧等</p>
+                <div class="cta">
+                    <button class="btn-outline" onclick="loadFullContent('strategy-4')">加载完整内容</button>
+                </div>
+            </div>
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('strategy-3')">← 上一个策略</button>
+                <button class="btn-primary" onclick="navigateTo('notes')">补充说明 →</button>
+            </div>
+        </section>
+
+        <section id="notes" class="section">
+            <h1 class="section-title">补充说明</h1>
+
+            <div class="content-block">
+                <h2>重要提示</h2>
+
+                <div class="alert alert-info">
+                    <h3>1. 并非所有ENTP都存在上述问题</h3>
+                    <p>本文档集所描述的思维内耗问题，是<strong>部分ENTP</strong>在创业、搞钱、事业发展中可能遇到的典型卡点，而非所有ENTP的必然特征。</p>
+                </div>
+
+                <div class="alert alert-success">
+                    <h3>2. 察觉内耗是改变的开始</h3>
+                    <p>很多ENTP长期处于思维内耗中却不自知。一旦察觉到问题的存在，你已经跨过了最难的一步。</p>
+                </div>
+
+                <div class="alert alert-warning">
+                    <h3>3. ENTP的思维模式也可以是天赋优势</h3>
+                    <p>Ne+Ti不是缺陷，而是特质。当思维内耗被破解后，同样的认知模式可以成为强大优势。</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h2>后续更新预告</h2>
+                <div class="update-list">
+                    <div class="update-item">
+                        <div class="update-icon">📊</div>
+                        <div class="update-content">
+                            <h3>ENTP职业路径设计详解</h3>
+                            <p>如何将思维特质转化为职业优势</p>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-icon">🧩</div>
+                        <div class="update-content">
+                            <h3>系统二运作逻辑与实践方法</h3>
+                            <p>深度思考和长期坚持的心理机制</p>
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-icon">🎯</div>
+                        <div class="update-content">
+                            <h3>行动中不可持续问题的破解</h3>
+                            <p>解决"三分钟热度"现象</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="final-message">
+                <h2>最后的话</h2>
+                <div class="quote-box">
+                    <p>你的大脑是一个强大的工具，能看到别人看不到的可能性，能建立复杂的逻辑体系。</p>
+                    <p><strong>问题不是你不够聪明</strong>，而是缺少了一些辅助系统、需要一些外部约束、需要补齐某些执行技能。</p>
+                    <p class="highlight-text">一旦破解思维内耗，你的创造力会真正转化为生产力！</p>
+                </div>
+                <div class="cta">
+                    <button class="btn-primary" onclick="navigateTo('intro')">重新开始阅读</button>
+                </div>
+            </div>
+
+            <div class="section-footer">
+                <button class="btn-secondary" onclick="navigateTo('strategy-4')">← 上一章</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

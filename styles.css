@@ -1,0 +1,1008 @@
+/* 全局样式 */
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary-color: #8b5cf6;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #3b82f6;
+
+    --bg-main: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --bg-dark: #1f2937;
+
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    --ne-color: #ec4899;
+    --ti-color: #3b82f6;
+    --si-color: #8b5cf6;
+
+    --sidebar-width: 280px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+}
+
+/* 侧边栏 */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--bg-dark);
+    color: white;
+    overflow-y: auto;
+    padding: 2rem 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.logo {
+    padding: 0 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-header {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 1rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: var(--primary-light);
+}
+
+.nav-item.active {
+    background: rgba(99, 102, 241, 0.2);
+    color: white;
+    border-left-color: var(--primary-color);
+}
+
+.nav-item .icon {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+/* 主内容区 */
+.content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero区域 */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 1rem;
+    color: white;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 快速导航卡片 */
+.quick-nav {
+    margin-bottom: 3rem;
+}
+
+.quick-nav h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.quick-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.quick-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.quick-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.quick-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.quick-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.quick-card p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* 核心观点 */
+.key-points {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+.key-points h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.point-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.point-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.point-number {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.point-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.point-content p {
+    color: var(--text-secondary);
+}
+
+/* 内容块 */
+.content-block {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.content-block h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.content-block h3 {
+    font-size: 1.375rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--text-primary);
+}
+
+.content-block h4 {
+    font-size: 1.125rem;
+    margin: 1rem 0 0.75rem;
+    color: var(--text-primary);
+}
+
+.content-block p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.content-block ul, .content-block ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+/* 章节标题 */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* 特殊文本样式 */
+.highlight-text {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+    margin: 1rem 0;
+}
+
+.warning-text {
+    color: var(--danger-color);
+    font-weight: 600;
+}
+
+.info-text {
+    color: var(--info-color);
+    font-style: italic;
+}
+
+.question-text {
+    color: var(--warning-color);
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* 定义框 */
+.definition-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+/* 对比框 */
+.comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.compare-item {
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    border: 2px solid var(--border-color);
+}
+
+.compare-item.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border-color: var(--primary-color);
+}
+
+.compare-label {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 特性网格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.feature-card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+/* 功能列表 */
+.function-list {
+    margin: 1.5rem 0;
+}
+
+.function-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+}
+
+.function-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.function-badge.ne {
+    background: var(--ne-color);
+}
+
+.function-badge.ti {
+    background: var(--ti-color);
+}
+
+.function-badge.si {
+    background: var(--si-color);
+}
+
+/* 流程图 */
+.process-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.flow-step {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    min-width: 150px;
+}
+
+.flow-step small {
+    display: block;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    font-size: 0.875rem;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 影响列表 */
+.impact-section {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(245, 158, 11, 0.1));
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.impact-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.impact-list li {
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+}
+
+/* 代码块 */
+.code-block {
+    background: var(--bg-dark);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+/* 功能详解 */
+.function-detail {
+    margin: 2rem 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.function-header {
+    padding: 1.5rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ne-bg {
+    background: linear-gradient(135deg, var(--ne-color), #db2777);
+}
+
+.ti-bg {
+    background: linear-gradient(135deg, var(--ti-color), #2563eb);
+}
+
+.si-bg {
+    background: linear-gradient(135deg, var(--si-color), #7c3aed);
+}
+
+.function-tag {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.375rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+.function-body {
+    background: white;
+    padding: 2rem;
+}
+
+/* 警告框 */
+.alert {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: var(--danger-color);
+}
+
+.alert-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--warning-color);
+}
+
+.alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--info-color);
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: var(--success-color);
+}
+
+.alert h4 {
+    margin-top: 0;
+}
+
+/* 示例框 */
+.example-box {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    border: 2px dashed var(--border-color);
+}
+
+/* 负面列表 */
+.negative-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+/* 链条效果 */
+.chain-effect {
+    margin: 1.5rem 0;
+}
+
+.chain {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.chain span {
+    background: var(--bg-secondary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.chain-arrow {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* 循环图 */
+.cycle-diagram {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+}
+
+.cycle-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.cycle-step.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border: 2px solid var(--primary-color);
+}
+
+.cycle-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.cycle-arrow {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+/* 原则网格 */
+.principle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.principle-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.principle-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.principle-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.principle-card h3 {
+    margin-bottom: 1rem;
+}
+
+.principle-card p {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 策略表格 */
+.strategy-table {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-dark);
+    color: white;
+    font-weight: 600;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.table-row:hover {
+    background: var(--bg-secondary);
+}
+
+.table-row.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.speed-fast {
+    color: var(--success-color);
+    font-weight: 600;
+}
+
+.speed-medium {
+    color: var(--warning-color);
+    font-weight: 600;
+}
+
+/* 策略标题 */
+.strategy-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.strategy-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.strategy-badge.recommended {
+    background: rgba(255, 215, 0, 0.3);
+}
+
+.strategy-motto {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* 更新列表 */
+.update-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.update-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 0.75rem;
+}
+
+.update-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.update-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* 最终信息 */
+.final-message {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+}
+
+.quote-box {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.quote-box p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+/* 按钮 */
+.cta {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--border-color);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 章节底部 */
+.section-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .content {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .quick-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .section-footer {
+        flex-direction: column;
+    }
+
+    .section-footer button {
+        width: 100%;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .sidebar,
+    .back-to-top,
+    .section-footer {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .section {
+        display: block !important;
+        page-break-after: always;
+    }
+}
