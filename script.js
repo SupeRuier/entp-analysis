@@ -112,26 +112,56 @@ function createMobileMenu() {
             position: fixed;
             top: 1rem;
             left: 1rem;
-            width: 3rem;
-            height: 3rem;
-            background: var(--primary-color);
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             border: none;
-            border-radius: 0.5rem;
-            font-size: 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1.75rem;
             cursor: pointer;
             z-index: 1001;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
         `;
         document.body.appendChild(mobileMenuBtn);
 
         mobileMenuBtn.addEventListener('click', () => {
-            document.querySelector('.sidebar').classList.toggle('mobile-open');
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('mobile-open');
+
+            // 切换按钮图标
+            if (sidebar.classList.contains('mobile-open')) {
+                mobileMenuBtn.innerHTML = '✕';
+                mobileMenuBtn.style.fontSize = '2rem';
+            } else {
+                mobileMenuBtn.innerHTML = '☰';
+                mobileMenuBtn.style.fontSize = '1.75rem';
+            }
+        });
+
+        // 添加悬停效果
+        mobileMenuBtn.addEventListener('mouseenter', () => {
+            mobileMenuBtn.style.transform = 'scale(1.05)';
+            mobileMenuBtn.style.boxShadow = '0 15px 20px -5px rgba(0, 0, 0, 0.3)';
+        });
+
+        mobileMenuBtn.addEventListener('mouseleave', () => {
+            mobileMenuBtn.style.transform = 'scale(1)';
+            mobileMenuBtn.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.2)';
         });
 
         // 点击内容区域关闭菜单
         document.querySelector('.content').addEventListener('click', () => {
-            document.querySelector('.sidebar').classList.remove('mobile-open');
+            const sidebar = document.querySelector('.sidebar');
+            if (sidebar.classList.contains('mobile-open')) {
+                sidebar.classList.remove('mobile-open');
+                mobileMenuBtn.innerHTML = '☰';
+                mobileMenuBtn.style.fontSize = '1.75rem';
+            }
         });
     } else if (window.innerWidth > 768 && mobileMenuBtn) {
         mobileMenuBtn.remove();

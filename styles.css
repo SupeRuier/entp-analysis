@@ -941,9 +941,23 @@ body {
     .content {
         padding: 2rem;
     }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .process-flow {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
 }
 
 @media (max-width: 768px) {
+    /* 侧边栏 */
     .sidebar {
         transform: translateX(-100%);
         transition: transform 0.3s ease;
@@ -953,39 +967,330 @@ body {
         transform: translateX(0);
     }
 
+    /* 主内容区 */
     .content {
         margin-left: 0;
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    /* 文字大小调整 */
+    .hero {
+        padding: 2.5rem 1.5rem;
     }
 
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .section-title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        word-break: break-word;
     }
 
+    .content-block {
+        padding: 1.5rem;
+    }
+
+    .content-block h2 {
+        font-size: 1.375rem;
+    }
+
+    .content-block h3 {
+        font-size: 1.125rem;
+    }
+
+    /* 卡片布局 */
     .quick-cards {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
-    .table-header,
-    .table-row {
+    .quick-card {
+        padding: 1.5rem;
+    }
+
+    .feature-grid {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
+    .principle-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* 表格优化 */
     .table-header {
         display: none;
     }
 
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .table-row > div {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .table-row > div:last-child {
+        border-bottom: none;
+    }
+
+    /* 流程图优化 */
+    .process-flow {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .flow-step {
+        width: 100%;
+        min-width: auto;
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+        font-size: 1.25rem;
+    }
+
+    /* 循环图优化 */
+    .cycle-diagram {
+        padding: 1rem;
+    }
+
+    .cycle-step {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .cycle-content {
+        font-size: 0.875rem;
+    }
+
+    .cycle-arrow {
+        font-size: 1.5rem;
+        margin: 0.25rem 0;
+    }
+
+    /* 链条效果 */
+    .chain {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chain span {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .chain-arrow {
+        transform: rotate(90deg);
+        font-size: 1.25rem;
+    }
+
+    /* 功能列表 */
+    .function-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .function-desc {
+        font-size: 0.875rem;
+    }
+
+    /* 功能详解 */
+    .function-header {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        padding: 1.25rem 1rem;
+    }
+
+    .function-header h3 {
+        font-size: 1.125rem;
+    }
+
+    .function-body {
+        padding: 1.25rem;
+    }
+
+    /* 对比框 */
+    .comparison {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    /* 更新列表 */
+    .update-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    /* 核心观点 */
+    .key-points {
+        padding: 1.5rem;
+    }
+
+    .point-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .point-content h3 {
+        font-size: 1rem;
+    }
+
+    .point-content p {
+        font-size: 0.875rem;
+    }
+
+    /* 按钮 */
     .section-footer {
         flex-direction: column;
+        gap: 0.75rem;
     }
 
     .section-footer button {
         width: 100%;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* 返回顶部按钮 */
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.25rem;
+    }
+
+    /* 警告框和提示框 */
+    .alert {
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .alert h4 {
+        font-size: 1rem;
+    }
+
+    .example-box {
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .definition-box {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    /* 引用框 */
+    .quote-box {
+        padding: 1.25rem;
+    }
+
+    .quote-box p {
+        font-size: 0.95rem;
+    }
+
+    /* 策略标题 */
+    .strategy-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .strategy-motto {
+        font-size: 1rem;
+    }
+
+    /* 特性图标 */
+    .feature-icon,
+    .quick-icon,
+    .principle-icon,
+    .update-icon {
+        font-size: 2rem;
+    }
+
+    /* 代码块 */
+    .code-block {
+        padding: 1rem;
+        font-size: 0.875rem;
+        overflow-x: auto;
+    }
+
+    /* 列表间距 */
+    .content-block ul,
+    .content-block ol {
+        margin-left: 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* 小屏手机优化 */
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .content-block {
+        padding: 1.25rem;
+    }
+
+    .content-block h2 {
+        font-size: 1.125rem;
+    }
+
+    .content-block h3 {
+        font-size: 1rem;
+    }
+
+    .quick-card,
+    .feature-card,
+    .principle-card {
+        padding: 1.25rem;
+    }
+
+    .point-number {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .key-points {
+        padding: 1.25rem;
     }
 }
 
